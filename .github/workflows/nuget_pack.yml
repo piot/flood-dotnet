@@ -17,7 +17,7 @@ jobs:
           prefix: 'v'
 
       - name: Pack
-        run: dotnet pack /p:${{ steps.version.outputs.full }}
+        run: dotnet pack /p:${{ steps.version.outputs.full_without_prefix }}
         working-directory: src/
 
       - name: Upload
