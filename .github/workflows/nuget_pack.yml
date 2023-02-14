@@ -11,8 +11,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - uses: nowsprinting/check-version-format-action@v3
+        id: version
+        with:
+          prefix: 'v'
+
       - name: Pack
-        run: dotnet pack /p:${{ github.ref_name }}
+        run: dotnet pack /p:${{ steps.version.outputs.full }}
         working-directory: src/
 
       - name: Upload
