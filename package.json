@@ -1,5 +1,5 @@
 {
-  "name": "network.piot.flood.dotnet",
+  "name": "network.piot.flood",
   "version": "0.0.1",
   "displayName": "Flood Bit Serializer",
   "description": "",
